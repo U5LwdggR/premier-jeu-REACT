@@ -22,6 +22,7 @@ function calculateWinner(squares) {
     [0, 4, 8],
     [2, 4, 6],
   ];
+
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
@@ -31,7 +32,7 @@ function calculateWinner(squares) {
   return null;
 }
 
-function Tableau({ xIsNext, squares, onPlay }) {
+function Tableau({ squares, onPlay }) {
   const [tableau, setTableau] = useState(Array(9).fill(null));
   let [xIsNext, setXIsNext] = useState(true);
 
